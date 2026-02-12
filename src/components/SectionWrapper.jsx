@@ -18,7 +18,7 @@ const SectionWrapper = ({ children, id, className = "", decorative = true }) => 
                 </div>
             )}
 
-            <section id={id} className={`py-24 md:py-32 lg:py-40 relative overflow-hidden ${className}`}>
+            <section id={id} className={`py-16 md:py-32 lg:py-40 relative overflow-hidden ${className}`}>
                 {/* Background Elements */}
                 <div className="absolute inset-0 bg-rich-black -z-20" />
                 <div className="absolute inset-0 noise -z-10 opacity-20 mix-blend-soft-light"></div>

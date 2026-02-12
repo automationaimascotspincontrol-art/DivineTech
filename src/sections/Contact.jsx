@@ -49,7 +49,7 @@ const Contact = () => {
 
             <div className="max-w-4xl mx-auto relative z-10">
                 <div className="text-center mb-12">
-                    <h2 className="text-4xl md:text-5xl font-serif text-white mb-4">{contactConfig.title}</h2>
+                    <h2 className="text-3xl md:text-5xl font-serif text-white mb-4">{contactConfig.title}</h2>
                     <p className="text-dim text-lg">{contactConfig.subtitle}</p>
                 </div>
 
@@ -61,7 +61,7 @@ const Contact = () => {
                         <Button variant="outline" onClick={() => setSubmitted(false)}>Send Another Message</Button>
                     </div>
                 ) : (
-                    <form onSubmit={handleSubmit} className="space-y-6 bg-zinc-900/40 p-10 md:p-14 rounded-2xl border border-white/10 shadow-2xl backdrop-blur-lg relative group">
+                    <form onSubmit={handleSubmit} className="space-y-6 bg-zinc-900/40 p-6 md:p-14 rounded-2xl border border-white/10 shadow-2xl backdrop-blur-lg relative group">
                         {/* Hover Border Effect */}
                         <div className="absolute inset-0 rounded-2xl border border-gold/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
 

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const About = () => {
     return (
         <SectionWrapper id="about" className="bg-black" decorative={true}>
-            <div className="grid md:grid-cols-2 gap-16 md:gap-20 items-center">
+            <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
                 {/* Left: Text Content */}
                 <div className="space-y-8">
                     <motion.div

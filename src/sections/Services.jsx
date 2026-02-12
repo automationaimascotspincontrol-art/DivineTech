@@ -32,7 +32,7 @@ const Services = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
+                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
                         Our <span className="text-gradient-gold">Services</span>
                     </h2>
                     <div className="w-24 h-1 bg-gradient-to-r from-gold to-gold-dark mx-auto mb-6 rounded-full"></div>

@@ -23,6 +23,26 @@ const NavBar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const handleNavClick = (e, href) => {
+        e.preventDefault();
+        setIsOpen(false);
+        const targetId = href.replace('#', '');
+        const element = document.getElementById(targetId);
+
+        if (element) {
+            setTimeout(() => {
+                const offset = 80; // approximate header height
+                const elementPosition = element.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.scrollY - offset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+            }, 100);
+        }
+    };
+
     return (
         <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-black/90 backdrop-blur-xl py-3 shadow-premium border-b border-white/5' : 'bg-transparent py-5'}`}>
             <div className="container mx-auto px-6 max-w-7xl">
@@ -33,6 +53,7 @@ const NavBar = () => {
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         className="text-xl md:text-2xl font-display font-bold text-gradient-gold tracking-wider relative z-10"
+                        onClick={(e) => handleNavClick(e, '#hero')}
                     >
                         Divine Tech
                     </motion.a>
@@ -46,6 +67,7 @@ const NavBar = () => {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.1 }}
                                 href={link.href}
+                                onClick={(e) => handleNavClick(e, link.href)}
                                 className="relative text-xs uppercase tracking-[0.2em] text-gray-400 hover:text-gold transition-colors duration-300 group"
                             >
                                 {link.name}
@@ -56,13 +78,17 @@ const NavBar = () => {
 
                     {/* CTA Button - Right */}
                     <div className="hidden md:block">
-                        <Button variant="primary" className="px-6 py-2.5 text-xs" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+                        <Button variant="primary" className="px-6 py-2.5 text-xs" onClick={(e) => handleNavClick(e, '#contact')}>
                             Start Project
                         </Button>
                     </div>
 
                     {/* Mobile Menu Button */}
-                    <button className="lg:hidden text-white hover:text-gold transition-colors" onClick={() => setIsOpen(!isOpen)}>
+                    <button
+                        className="lg:hidden text-white hover:text-gold transition-colors relative z-50 p-2"
+                        onClick={() => setIsOpen(!isOpen)}
+                        aria-label="Toggle menu"
+                    >
                         {isOpen ? <X size={24} /> : <Menu size={24} />}
                     </button>
                 </div>
@@ -83,12 +109,12 @@ const NavBar = () => {
                                     key={link.name}
                                     href={link.href}
                                     className="text-lg uppercase tracking-widest text-gray-300 hover:text-gold transition-colors"
-                                    onClick={() => setIsOpen(false)}
+                                    onClick={(e) => handleNavClick(e, link.href)}
                                 >
                                     {link.name}
                                 </a>
                             ))}
-                            <Button variant="primary" className="px-8 py-3" onClick={() => setIsOpen(false)}>
+                            <Button variant="primary" className="px-8 py-3" onClick={(e) => handleNavClick(e, '#contact')}>
                                 Start Project
                             </Button>
                         </div>

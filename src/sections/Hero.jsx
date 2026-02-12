@@ -32,7 +32,7 @@ const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1, delay: 0.5 }}
-                        className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-display font-bold text-white mb-8 leading-[1.1] tracking-tight"
+                        className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-display font-bold text-white mb-6 leading-[1.1] tracking-tight"
                     >
                         Crafting <span className="text-gradient-gold block md:inline">Digital Luxury</span>
                         <br className="hidden sm:block" />

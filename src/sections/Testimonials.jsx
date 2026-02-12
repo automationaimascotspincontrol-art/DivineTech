@@ -11,7 +11,7 @@ const Testimonials = () => {
             <div className="absolute top-1/2 left-1/2 w-[500px] h-[500px] bg-gold/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
 
             <div className="text-center mb-16 relative z-10">
-                <h2 className="text-4xl md:text-5xl font-serif text-white mb-4">Client <span className="text-gradient-gold">Stories</span></h2>
+                <h2 className="text-3xl md:text-5xl font-serif text-white mb-4">Client <span className="text-gradient-gold">Stories</span></h2>
                 <p className="text-dim">Trusted by visionary leaders across the globe.</p>
             </div>
 

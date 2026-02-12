@@ -17,7 +17,7 @@ const Founder = () => {
                         transition={{ duration: 0.8 }}
                     >
                         <span className="text-gold text-sm tracking-widest uppercase mb-2 block">Visionary Leadership</span>
-                        <h2 className="text-4xl md:text-5xl font-serif text-white mb-6">Meet the <span className="text-gradient-gold">Founder</span></h2>
+                        <h2 className="text-3xl md:text-5xl font-serif text-white mb-6">Meet the <span className="text-gradient-gold">Founder</span></h2>
 
                         <h3 className="text-2xl text-white mb-4">{founderData.name} <span className="text-dim text-lg block md:inline font-normal">| {founderData.role}</span></h3>
 

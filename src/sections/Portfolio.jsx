@@ -45,7 +45,7 @@ const Portfolio = () => {
         <SectionWrapper id="portfolio" className="bg-black">
             <div className="flex flex-col md:flex-row justify-between items-end mb-16">
                 <div className="mb-6 md:mb-0">
-                    <h2 className="text-4xl md:text-5xl font-serif text-white mb-4">Selected <span className="text-gradient-gold">Works</span></h2>
+                    <h2 className="text-3xl md:text-5xl font-serif text-white mb-4">Selected <span className="text-gradient-gold">Works</span></h2>
                     <p className="text-dim max-w-xl">
                         A curated selection of our finest digital craftsmanship.
                     </p>
